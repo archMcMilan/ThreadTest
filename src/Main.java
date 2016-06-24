@@ -6,7 +6,6 @@ class Sum extends Thread{
     int end;
     long result;
     int array[];
-    volatile boolean flag=false;
     public Sum(int begin, int end,int[] array) {
         this.begin = begin;
         this.end = end;
@@ -18,7 +17,6 @@ class Sum extends Thread{
         for(int i=begin;i<end;i++){
             result+=array[i];
         }
-        flag=true;
     }
 
 }
